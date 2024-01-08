@@ -1,8 +1,6 @@
 import time
 
 from appium.webdriver.common.mobileby import MobileBy
-
-from Utilities import Utilities
 from Utilities.Utilities import readconfigfile
 
 

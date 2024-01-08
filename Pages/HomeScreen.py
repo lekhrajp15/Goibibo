@@ -1,4 +1,6 @@
 from appium.webdriver.common.mobileby import MobileBy
+
+from Pages.BusBooking import BusBooking
 from Pages.FlightBooking import FlightBooking
 from Pages.HotelBooking import HotelBooking
 
@@ -9,6 +11,7 @@ class HomeScreen:
 
     flights = (MobileBy.XPATH, "//*[@content-desc='flights']")
     hotels =  (MobileBy.XPATH, "//*[@content-desc='hotels']")
+    bus = (MobileBy.XPATH, "//*[@content-desc='bus']")
 
 
     def click_flight(self):
@@ -20,6 +23,11 @@ class HomeScreen:
         self.driver.find_element(*HomeScreen.hotels).click()
         HB = HotelBooking(self.driver)
         return HB
+
+    def click_bus(self):
+        self.driver.find_element(*HomeScreen.bus).click()
+        BB= BusBooking(self.driver)
+        return BB
 
 
 

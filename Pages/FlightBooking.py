@@ -19,7 +19,7 @@ class FlightBooking:
     return_click = (MobileBy.XPATH, "//*[@resource-id ='com.goibibo:id/textFlightRetDate']")
     calendar_month = (MobileBy.XPATH, "//*[@resource-id='com.goibibo:id/calendar_date_display']")
 
-    def from_place(self):
+    def flight_booking(self):
 
         #Click From Place
         self.driver.find_element(*FlightBooking.From_place).click()
